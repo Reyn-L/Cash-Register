@@ -5,39 +5,54 @@
   <title>Cash Resgister</title>
 </head>
 <body>
-    <input type="text" name="textbox" id="box">
-  <div id = "section1">
-      <td> <input type="button" value = "7"> </td>
-      <td> <input type="button" value = "8"> </td>
-      <td> <input type="button" value = "9"> </td>
-      <td> <input type="button" value = "÷"> </td>  </div>
-  <div id = "section2">
-      <td> <input type="button" value = "4"> </td>
-      <td> <input type="button" value = "5"> </td>
-      <td> <input type="button" value = "6"> </td>
-      <td> <input type="button" value = "×"> </td>
-  </div>
-  <div id = "section3">
-      <td> <input type="button" value = "1"> </td>
-      <td> <input type="button" value = "2"> </td>
-      <td> <input type="button" value = "3"> </td>
-      <td> <input type="button" value = "-"> </td>
-  </div>
-  <div id = "section4">
-      <td> <input type="button" value = "0"> </td>
-      <td> <input type="button" value = "00"> </td>
-      <td> <input type="button" value = "."> </td>
-      <td> <input type="button" value = "+"> </td>
-      <td> <input type="button" value = "="> </td>
-  </div>
-  <div id = "section5">
-      <td> <input type="button" value = "Clear"> </td>
-      <td> <input type="button" value = "Get Balance"> </td>
-      <td> <input type="button" value = "Deposit Cash"> </td>
-      <td> <input type="button" value = "Withdraw Cash"> </td>
+ <input type="text" maxlength="40" size="29" name="Display" id = "display">
+    <div id = "section1">
+      <table border ="4">
+        <tr id = "table">
+          <td id = "seven"> <input type="button" value = "7"> </td>
+          <td id = "eight"> <input type="button" value = "8"> </td>
+          <td id = 'nine'> <input type="button" value = "9"> </td>
+          <td id = 'divide'> <input type="button" value = "÷"> </td>
+          <td id = "clear"> <input type="button" value = "Clear"> </td>
+        </tr>
+    </div>
+    <div id = "section2">
+        <tr>
+          <td id = "four"> <input type="button" value = "4"> </td>
+          <td id = "five"> <input type="button" value = "5"> </td>
+          <td id = "six"> <input type="button" value = "6"> </td>
+          <td id = "multiply"> <input type="button" value = "×"> </td>
+          <td id = "balance"> <input type="button" value = "Get Balance"> </td>
+        </tr>
+    </div>
+    <div id = "section3">
+          <td id = "one"> <input type="button" value = "1"> </td>
+          <td id = "two"> <input type="button" value = "2"> </td>
+          <td id = "three"> <input type="button" value = "3"> </td>
+          <td id = "subtract"> <input type="button" value = "-"> </td>
+          <td id = "deposit"> <input type="button" value = "Deposit Cash"> </td>
+        </tr>
+    </div>
+    <div id = "section4">
+        <tr>
+          <td id = "zero"> <input type="button" value = "0"> </td>
+          <td id = "double"> <input type="button" value = "00"> </td>
+          <td id = "decimal"> <input type="button" value = "."> </td>
+          <td id = "plus"> <input type="button" value = "+"> </td>
+          <td id = "withdraw"> <input type="button" value = "Withdraw Cash"> </td>
+        </tr>
+    </div>
+    <div id = "section5">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td id = "equal"> <input type="button" value = "="> </td>
+        </tr>
+      </table>
     <div class="container" id="main">
-</div>
-  <script src="js/calculator.js"></script>
-  <script src="js/cash_register.js"></script>
+    </div>
+    <script src="js/calculator.js"></script>
+    <script src="js/cash_register.js"></script>
 </body>
 </html>

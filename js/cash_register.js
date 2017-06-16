@@ -1,6 +1,8 @@
 /*jshint esversion: 6 */
-const buttons = document.getelementById('buttons');
+var button7 = document.getelementById("seven").addEventListener("click", number7);
+var screen = document.getelementById("display");
+number7.addEventListener("click", test);
+function test(){
+  screen.innerHTML +=7;
 
-
-
-document.addEventListener(buttons, 'cick');
+}
