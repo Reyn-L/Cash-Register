@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 (function(){
   let cal = window.calculator;
+  //getting buttons to work and show
 const display = document.getElementById("display");
 const NUMBER = document.querySelectorAll("input");
     NUMBER.forEach(function(num){
@@ -8,16 +9,46 @@ const NUMBER = document.querySelectorAll("input");
         display.innerHTML += r.target.value;
         console.log(r.target.value);
       });
-
+//gets display to show
 function getDisplay(){
   return display.innerHTML;
 }
+//function updateDisplay(){
+  //return dislay.innerHTML = }
+
+function clearAll(){
+  document.getElementById("display").value = "0.00";
+}
 let value = getDisplay();
 cal.load(Number(value));
+
+function load(){
+let store =0;
+}
     });
+//adds
+const plus = document.getElementById("plus");
 function getSum(){
+plus.addEventListener();
   cal.add();
   return cal.add();
+}
+//equals
+function equal(){
+  cal.equal();
+}
+
+//switch case for operators
+function operators(op, hi){
+  switch(op){
+    case "+": cal.add(hi);
+      break;
+    case "-": cal.subtract(hi);
+      break;
+    case "x": cal.multiply(hi);
+      break;
+    case "÷": cal.divide(hi);
+  }
 }
 
 
@@ -25,6 +56,14 @@ function getSum(){
 
 }());
 
+//1st get load function working to store the memory
+//2nd create a new function to start on add
+//3rd the add funtion should be an eventlistener
+//4th we can use eventlistener to make the + button, store into the load function
+//5th possibly by referencing the load function within the add function
+//6th the + sign should end the string of numbers
+//7th convert strings into numbers via Number(value) or parseInt
+//8th Reference calculator.js
 
 /*const DOUBLE = document.getElementById("double");
 const ZERO = document.getElementById("zero");
