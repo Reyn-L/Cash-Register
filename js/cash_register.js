@@ -22,24 +22,33 @@ function clearAll(){
 let value = getDisplay();
 cal.load(Number(value));
 
-function load(){
-let store =0;
-}
     });
+
+
+
+
+
+
 //adds
-const plus = document.getElementById("plus");
+let operator;
+
 function getSum(){
-plus.addEventListener();
-  cal.add();
-  return cal.add();
+operator = "+";
+cal.load(Number(display.innerHTML));
+display.innerHTML = "";
 }
 //equals
 function equal(){
-  cal.equal();
+  let op = operator;
+  let n = Number(display.innerHTML);
+  if(op === "+"){
+    let ad = cal.add(n);
+    display.innerHTML = ad;
+  }
 }
 
 //switch case for operators
-function operators(op, hi){
+/*function operators(op, hi){
   switch(op){
     case "+": cal.add(hi);
       break;
@@ -49,7 +58,7 @@ function operators(op, hi){
       break;
     case "÷": cal.divide(hi);
   }
-}
+}*/
 
 
 

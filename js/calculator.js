@@ -1,64 +1,64 @@
 /*jshint esversion: 6 */
-window.Calculator = (function() {
-  let total = 0;
+window.calculator = (function() {
   let memory = 0;
-  return{
-  start : load,
-  sum : add,
-  difference : subtract,
-  product : multiply,
-  quotient : divide,
-  wipe : clear,
-  balance : getBalance,
-  deposit : depositCash,
-  withdraw : withdrawCash,
-  error : error
-};
+  let total = 0;
 
-function load(x){
-  error(x);
-  total = x;
+  function load(x){
+  validate (x);
+    total = x;
   return total;
-}
-function add(x){
-  error(x);
-  total = total + x;
-  return total;
-}
-function subtract(x){
-  error(x);
-  total = total - x;
-  return total;
-}
-function multiply(x){
-  error(x);
-  total = total * x;
-  return total;
-}
-function divide(x){
-  error(x);
-  total = total / x;
-  return total;
-}
-function clear() {
-  memory = 0;
-  return memory;
-}
-function getBalance(){
-  return total;
-}
-function depositCash(){
-  memory = total;
-  return memory;
-}
-function withdrawCash(){
-  return memory;
-}
-function error(x) {
-  if(typeof x !== "number"){
-    throw new Error("Error");
+    }
+  function getTotal(){
+    return total;
   }
+  function add(x){
+   validate(x);
+    total = x + total;
+    return total;
   }
+  function subtract(x){
+    validate(x);
+    total = total - x;
+
+    return total;
+  }
+  function multiply(x){
+    validate(x);
+    total = total * x;
+    return total;
+  }
+  function divide(x){
+    validate(x);
+    total = total / x;
+    return total;
+  }
+  function recallMemory(){
+    return  memory;
+  }
+  function saveMemory(){
+    memory = total;
+    return memory;
+  }
+  function clearMemory(){
+    memory = 0;
+    return memory;
+  }
+  function validate(x){
+    if(typeof x !== 'number'){
+      throw new Error('Invalid');
+    }
+  }
+    return {
+    load : load,
+    getTotal : getTotal,
+    add : add,
+    subtract : subtract,
+    multiply : multiply,
+    divide : divide,
+    recallMemory : recallMemory,
+    saveMemory : saveMemory,
+    clearMemory : clearMemory,
+  };
 
 })();
 
